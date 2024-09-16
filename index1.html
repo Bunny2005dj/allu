@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Example CSS for a background image on one of the pages */
+        body {
+            background-image: url('./images/allu-arjun-bunny.gif');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <audio id="welcomeAudio" src="./sounds/allu.mp3" autoplay></audio>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('welcomeAudio');
+            audio.play().catch(function(error) {
+                console.log("Autoplay failed: ", error);
+            });
+        };
+    </script>
+</body>
+</html>
